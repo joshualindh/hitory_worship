@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitory Worship</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for hamburger icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/hitory-logo.png" alt="Hitory Logo" class="logo-image">
+                <h1>WORSHIP</h1>
+            </div>
+            <button class="hamburger-menu" aria-label="메뉴">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-container">
+                <ul class="nav-links">
+                    <li><a href="#home" data-i18n="nav.home">ホーム</a></li>
+                    <li><a href="#about" data-i18n="nav.about">紹介</a></li>
+                    <li><a href="#ministry" data-i18n="nav.ministry">ミニストリー</a></li>
+                    <li><a href="#videos" data-i18n="nav.videos">動画</a></li>
+                    <li><a href="#events" data-i18n="nav.events">集会</a></li>
+                    <li><a href="#contact" data-i18n="nav.contact">連絡先</a></li>
+                </ul>
+                <div class="language-selector">
+                    <select id="languageSelect">
+                        <option value="ja">日本語</option>
+                        <option value="ko">한국어</option>
+                        <option value="en">English</option>
+                        <option value="zh">中文</option>
+                    </select>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+              <h2 class="main-message" data-i18n="main.message1">一人ひとりの心に、</h2>
+              <h2 class="main-message" data-i18n="main.message2">イエスさまの愛が届きますように。</h2>
+<p class="main-message-desc" data-i18n="main.desc">
+        「HITORI」は "His Story" ―<br>
+                  イエスさまの愛の物語を、賛美を通して紡いでいくチームです。
+                </p>
+            </div>
+        </section>
+
+        <section id="instagram-video" class="instagram-section">
+            <h2>最新の賛美</h2>
+            <div class="content-grid">
+                <div class="video-container">
+                    <video controls class="main-video" preload="auto" muted>
+                        <source src="movie/hitory0815.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="intro-container">
+                    <h3>最新の賛美</h3>
+                    <p>天であがめられる - 하늘에서 찬란하게 빛나는</p>
+                    <p>ヒトリワーシップの最新の賛美をお楽しみください。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <h2 data-i18n="about.title">ヒトリワーシップ紹介</h2>
+            <div class="about-content">
+                <p data-i18n="about.description1">ヒトリワーシップは賛美を通じて神様の愛を伝える賛美チームです。</p>
+                <p data-i18n="about.description2">私たちは賛美を通じて人々が神様の臨在を体験し、聖霊様の導きを受けることを願っています。</p>
+            </div>
+        </section>
+
+        <section id="ministry" class="ministry">
+            <h2 data-i18n="ministry.title">ミニストリー</h2>
+            <div class="ministry-content">
+                <div class="ministry-item">
+                    <h3 data-i18n="ministry.experience.title">礼拝体験の助け</h3>
+                    <p data-i18n="ministry.experience.description">礼拝を通して、一人ひとりが神様の臨在を体験できるように助けること</p>
+                </div>
+                <div class="ministry-item">
+                    <h3 data-i18n="ministry.restoration.title">礼拝の回復運動</h3>
+                    <p data-i18n="ministry.restoration.description">日本国内での賛美集会や教会合同礼拝などを通じた、礼拝の回復運動</p>
+                </div>
+                <div class="ministry-item">
+                    <h3 data-i18n="ministry.original.title">オリジナル賛美宣教</h3>
+                    <p data-i18n="ministry.original.description">オリジナル賛美を通して、日本語と韓国語で福音を伝える宣教活動</p>
+                </div>
+                <div class="ministry-item">
+                    <h3 data-i18n="ministry.open.title">開かれた礼拝文化</h3>
+                    <p data-i18n="ministry.open.description">教会の内に留まらず、未信者も招くことのできる「開かれた礼拝文化」の拡大</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="videos" class="videos">
+            <h2 data-i18n="videos.title">動画</h2>
+            <div class="video-grid">
+                <div class="video-item">
+                    <div class="youtube-container">
+                        <iframe src="https://www.youtube.com/embed/URhpyJ9j3dQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h3 data-i18n="videos.latest.title">最新の賛美</h3>
+                </div>
+                <div class="video-item">
+                    <div class="youtube-container">
+                        <iframe src="https://www.youtube.com/embed/8ssSy7m9kuk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h3 data-i18n="videos.live.title">ライブ映像</h3>
+                </div>
+            </div>
+            <div class="youtube-link">
+                <a href="https://www.youtube.com/@noahchapel" target="_blank" data-i18n="videos.more">もっと見る</a>
+            </div>
+        </section>
+
+        <section id="events" class="events">
+            <h2 data-i18n="events.title">集会情報</h2>
+            <div class="events-grid">
+                <div class="event-item">
+                    <div class="event-image">
+                        <img src="images/noah.png" alt="Noah Center" class="venue-image">
+                    </div>
+                    <div class="event-info">
+                        <div class="event-date" data-i18n="events.upcoming.date">2025年8月11日（月）　</div>
+                        <h3 data-i18n="events.upcoming.title">賛美集会</h3>
+                        <p data-i18n="events.upcoming.location">ノアセンター</p>
+                    </div>
+                </div>
+                <div class="event-item">
+                    <div class="event-image">
+                        <img src="images/kyoto.png" alt="Kyoto Mission Church" class="venue-image">
+                    </div>
+                    <div class="event-info">
+                        <div class="event-date" data-i18n="events.workshop.date">2025年8月15日</div>
+                        <h3 data-i18n="events.workshop.title">賛美集会</h3>
+                        <p data-i18n="events.workshop.location">京都宣教教会</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2 data-i18n="contact.title">連絡先</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <p data-i18n="contact.address">〒636-0073 奈良県北葛城郡河合町広瀬台２−１１−７　ヒトリワーシップ</p>
+                    <p data-i18n="contact.phone">TEL: 0745-60-3504</p>
+                    <p data-i18n="contact.email">Email: info@noahibc.org</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank" class="social-link">YouTube</a>
+                        <a href="#" target="_blank" class="social-link">Instagram</a>
+                        <a href="#" target="_blank" class="social-link">Facebook</a>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13139.132922485913!2d135.7228441!3d34.5843511!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60012f350aaa59bd%3A0x77a398dbbddd1ae2!2z44OO44Ki44Kk44Oz44K_44OK44K344On44OK44Or44OQ44Kk44OW44Or44OB44Oj44Oa44Or!5e0!3m2!1sja!2sjp!4v1677495556418!5m2!1sja!2sjp"
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        title="ノアセンター"
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Hitory Worship. All rights reserved.</p>
+    </footer>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 

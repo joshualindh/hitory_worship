@@ -1,0 +1,703 @@
+/* 전역 스타일 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans JP', 'Noto Sans KR', 'Noto Sans SC', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* 헤더 및 네비게이션 */
+header {
+    background-color: #000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-shrink: 0;
+}
+
+.logo-image {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.worship-text {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.hamburger-menu {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 3px;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* 언어 선택기 */
+.language-selector {
+    position: relative;
+    margin-left: 1rem;
+}
+
+#languageSelect {
+    padding: 0.5rem;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background-color: #000;
+    color: #fff;
+    font-family: inherit;
+    font-size: 0.9rem;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#languageSelect:hover {
+    border-color: #fff;
+}
+
+#languageSelect:focus {
+    border-color: #fff;
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.25);
+}
+
+#languageSelect option {
+    background-color: #000;
+    color: #fff;
+}
+
+/* 메인 컨텐츠 */
+main {
+    margin-top: 80px;
+}
+
+section {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 히어로 섹션 */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/main_bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin-top: -80px;
+    padding: 0;
+    max-width: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+/* 인스타그램 섹션 */
+.instagram-section {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 4rem 2rem;
+    min-height: auto;
+    overflow: visible;
+}
+
+.instagram-section h2 {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.instagram-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: start;
+    padding: 2rem;
+    min-height: 900px;
+}
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 1rem;
+        min-height: auto;
+    }
+    
+    .video-container {
+        min-height: 500px;
+    }
+    
+    .main-video {
+        max-width: 100%;
+    }
+    
+    .intro-container {
+        padding: 1.5rem;
+    }
+    
+    .intro-container h3 {
+        font-size: 1.5rem;
+    }
+    
+    .intro-container p {
+        font-size: 1rem;
+    }
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: visible;
+    min-height: 700px;
+}
+
+.main-video {
+    max-width: 350px;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    display: block;
+}
+
+.intro-container {
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.intro-container h3 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.intro-container p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+/* YouTube 영상 컨테이너 */
+.youtube-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 비율 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.youtube-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.hero-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+.hero-content h2 {
+    font-size: unset;
+}
+
+.hero-content .main-message {
+    font-size: 2.16rem !important;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 1.2rem 0;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+}
+
+/* 소개 섹션 */
+.about {
+    background-color: #f8f9fa;
+}
+
+.about h2, .worship h2, .schedule h2, .contact h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* 예배 섹션 */
+.worship-times {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.worship-item {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.worship-item h3 {
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+/* 일정 섹션 */
+.schedule {
+    background-color: #f8f9fa;
+}
+
+.calendar {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* 연락처 섹션 */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.contact-info {
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.contact-info p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+.map-container {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.map-container iframe {
+    display: block;
+}
+
+/* 푸터 */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* 미니스트리 섹션 */
+.ministry-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.ministry-item {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.ministry-item:hover {
+    transform: translateY(-5px);
+}
+
+.ministry-item h3 {
+    color: #007bff;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+/* 비디오 섹션 */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 비율 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-item h3 {
+    margin-top: 1rem;
+    text-align: center;
+    color: #333;
+}
+
+.youtube-link {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.youtube-link a {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: #ff0000;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.youtube-link a:hover {
+    background-color: #cc0000;
+}
+
+/* 이벤트 섹션 */
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.event-item {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.event-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.venue-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.venue-image:hover {
+    transform: scale(1.05);
+}
+
+.event-info {
+    padding: 2rem;
+    text-align: center;
+}
+
+.event-date {
+    color: #007bff;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.event-item h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.event-item p {
+    margin-bottom: 1.5rem;
+    color: #666;
+}
+
+.event-button {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.event-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* 소셜 링크 */
+.social-links {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.social-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: #555;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+        position: relative;
+        z-index: 1002;
+    }
+
+    .nav-container {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: #000;
+        flex-direction: column;
+        padding: 5rem 2rem 2rem;
+        transition: right 0.3s ease;
+        z-index: 1001;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .nav-container.active {
+        right: 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 2rem;
+        gap: 1.5rem;
+        width: 100%;
+        padding-top: 1rem;
+    }
+
+    .nav-links li {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 0.8rem 0;
+        width: 100%;
+    }
+
+    .language-selector {
+        margin-left: 0;
+        width: 100%;
+        display: block;
+        padding: 1rem 0;
+    }
+
+    #languageSelect {
+        width: 100%;
+        text-align: center;
+        padding: 0.8rem;
+        margin-top: 1rem;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+    
+    section {
+        padding: 3rem 1rem;
+    }
+    
+    .video-grid, .events-grid, .ministry-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-info {
+        order: 2;
+    }
+    
+    .map-container {
+        order: 1;
+    }
+    
+    .map-container iframe {
+        height: 300px;
+    }
+
+    .events-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+
+    .event-image {
+        height: 200px;
+    }
+
+    .event-info {
+        padding: 1.5rem;
+    }
+
+    .logo-image {
+        height: 60px;
+    }
+    
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    .worship-text {
+        font-size: 1.5rem;
+    }
+
+    .main-message {
+        font-size: 1.51rem !important;
+    }
+}
+
+.main-message {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 1.2rem 0;
+    line-height: 1.2;
+} 
